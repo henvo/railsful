@@ -24,8 +24,14 @@ Or install it yourself as:
 ## Prerequistes/Assumptions
 We assume you have these gems installed in your Rails application.
 
-- [FastJsonapi](https://github.com/Netflix/fast_jsonapi)
-- [Kaminari](https://github.com/kaminari/kaminari)
+### [FastJsonapi](https://github.com/Netflix/fast_jsonapi)
+```
+gem 'fast_jsonapi'
+```
+### [Kaminari](https://github.com/kaminari/kaminari)
+```
+gem 'kaminari'
+```
 
 ## Usage
 
