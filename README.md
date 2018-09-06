@@ -1,4 +1,6 @@
 # Railsful
+[![Maintainability](https://api.codeclimate.com/v1/badges/d1e81476a4c63779815e/maintainability)](https://codeclimate.com/github/hausgold/railsful/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d1e81476a4c63779815e/test_coverage)](https://codeclimate.com/github/hausgold/railsful/test_coverage)
 
 A small but helpful collection of concerns and tools to create
 a restful JSON API compliant Rails application.
