@@ -21,7 +21,7 @@ Or install it yourself as:
 
     $ gem install railsful
 
-## Prerequistes/Assumptions
+## Prerequisites/Assumptions
 We assume you have these gems installed in your Rails application.
 
 ### [FastJsonapi](https://github.com/Netflix/fast_jsonapi)
