@@ -16,7 +16,7 @@ module Railsful
       end
 
       def errors?(options)
-        errors(options).present?
+        !errors(options).empty?
       end
 
       # :reek:ManualDispatch
