@@ -2,13 +2,6 @@
 
 require 'spec_helper'
 
-class TestController
-  prepend Railsful::Serializable
-  include Railsful::Deserializable
-
-  def render(options = nil, extra_options = {}, &block); end
-end
-
 RSpec.describe Railsful::Serializer do
   let(:controller) { TestController.new }
   let(:serializer) { described_class.new(controller) }

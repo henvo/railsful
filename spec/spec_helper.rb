@@ -3,6 +3,7 @@ SimpleCov.start
 
 require 'active_record'
 require 'bundler/setup'
+require 'action_controller'
 require 'railsful'
 
 require 'support/test_controller'
