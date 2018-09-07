@@ -16,10 +16,10 @@ module Railsful
     def deserialize
       deserialized = {}
 
-      data = params[:data]
+      data = params.fetch(:data, {})
 
       # Merge the resources attributes
-      deserialized.merge!(data[:attributes])
+      deserialized.merge!(data.fetch(:attributes, {}))
 
       # Get the already existing relationships
       data.fetch(:relationships, {}).each do |type, payload|
