@@ -6,7 +6,8 @@ RSpec.describe Railsful::Serializer do
   let(:controller) { TestController.new }
   let(:serializer) { described_class.new(controller) }
   let(:renderable) { Dummy.new(1337) }
-  let(:params) { {} }
+  let(:param_hash) { {} }
+  let(:params) { ActionController::Parameters.new(param_hash) }
 
   before do
     allow(controller).to receive(:params).and_return(params)
@@ -21,7 +22,7 @@ RSpec.describe Railsful::Serializer do
       end
 
       context 'when pagination params are given' do
-        let(:params) { { page: { number: 1, size: 10 } } }
+        let(:param_hash) { { page: { number: 1, size: 10 } } }
 
         it 'does nothing' do
           expect(serializer.render(json)).to eq(json)
@@ -29,7 +30,7 @@ RSpec.describe Railsful::Serializer do
       end
 
       context 'when include params are given' do
-        let(:params) { { include: 'address' } }
+        let(:param_hash) { { include: 'address' } }
 
         it 'does nothing' do
           expect(serializer.render(json)).to eq(json)
@@ -50,7 +51,7 @@ RSpec.describe Railsful::Serializer do
       end
 
       context 'when include params are given' do
-        let(:params) { { include: 'address' } }
+        let(:param_hash) { { include: 'address' } }
 
         it 'adds a links key to the options' do
           expect(DummySerializer)
@@ -63,7 +64,7 @@ RSpec.describe Railsful::Serializer do
       end
 
       context 'when wrong pagination params are given' do
-        let(:params) { { page: 1 } }
+        let(:param_hash) { { page: 1 } }
 
         before do
           allow(renderable).to receive(:is_a?).and_return(true)
@@ -76,7 +77,7 @@ RSpec.describe Railsful::Serializer do
       end
 
       context 'when pagination include params are given' do
-        let(:params) { { page: { number: 1, size: 10 } } }
+        let(:param_hash) { { page: { number: 1, size: 10 } } }
 
         before do
           allow(renderable).to receive(:is_a?).and_return(true)

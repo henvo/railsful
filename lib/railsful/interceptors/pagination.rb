@@ -49,7 +49,7 @@ module Railsful
       # @return [ActiveRecord::Relation] The paginated relation.
       def paginate(relation)
         # If page param is not a hash, raise an error.
-        unless params.fetch(:page, nil).is_a?(Hash)
+        unless params.to_unsafe_hash.fetch(:page, nil).is_a?(Hash)
           raise PaginationError,
                 'Wrong pagination format. Hash expected.'
         end
