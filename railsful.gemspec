@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
                         'marcus.geissler@hausgold.de']
 
   spec.summary       = 'JSON API serializer and deserializer for Rails'
-  spec.description   = 'This gem provides useful helper functions to interact' \
-                       'with JSON API.'
-  spec.homepage      = 'https://github.com/hausgold/restful'
+  spec.description   = 'This gem provides useful helper functions to ' \
+                       'interaact with JSON API.'
+  spec.homepage      = 'https://github.com/hausgold/railsful'
   spec.license       = 'MIT'
 
   if spec.respond_to?(:metadata)
