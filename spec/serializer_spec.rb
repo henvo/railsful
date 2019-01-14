@@ -125,6 +125,34 @@ RSpec.describe Railsful::Serializer do
           serializer.render(json)
         end
       end
+
+      context 'when sort params are given' do
+        let(:param_hash) { { sort: 'name,-age,-?/,(§)' } }
+        let(:order_string) { 'name ASC, age DESC' }
+
+        before do
+          allow(renderable)
+            .to receive(:is_a?).with(ActiveModel::Errors) { false }
+          allow(renderable)
+            .to receive(:is_a?).with(ActiveRecord::Relation) { true }
+        end
+
+        it 'calls reorder on renderable' do
+          expect(renderable)
+            .to receive(:reorder)
+            .with(order_string)
+            .once
+
+          serializer.render(json)
+        end
+
+        context 'when relation does not respond to #reorder or #order' do
+          it 'raises a SortingError' do
+            expect { serializer.render(json) }
+              .to raise_error(Railsful::SortingError)
+          end
+        end
+      end
     end
 
     context 'when renderable is an ActiveModel::Errors' do
