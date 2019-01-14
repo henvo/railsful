@@ -5,8 +5,9 @@ require 'railsful/version'
 Gem::Specification.new do |spec|
   spec.name          = 'railsful'
   spec.version       = Railsful::VERSION
-  spec.authors       = ['Henning Vogt']
-  spec.email         = ['git@henvo.de']
+  spec.authors       = ['Henning Vogt', 'Marcus Geissler']
+  spec.email         = ['henning.vogt@hausgold.de',
+                        'marcus.geissler@hausgold.de']
 
   spec.summary       = 'JSON API serializer and deserializer for Rails'
   spec.description   = 'This gem provides useful helper functions to interact' \
