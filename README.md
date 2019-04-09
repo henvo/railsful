@@ -1,6 +1,7 @@
 # Railsful
 
 [![Build Status](https://travis-ci.com/hausgold/railsful.svg?branch=master)](https://travis-ci.com/hausgold/railsful)
+[![Gem Version](https://badge.fury.io/rb/railsful.svg)](https://badge.fury.io/rb/railsful)
 [![Maintainability](https://api.codeclimate.com/v1/badges/280110b88c5de6b6c472/maintainability)](https://codeclimate.com/repos/5cac8bcf6969c376b7007d57/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/280110b88c5de6b6c472/test_coverage)](https://codeclimate.com/repos/5cac8bcf6969c376b7007d57/test_coverage)
 [![API docs](https://img.shields.io/badge/docs-API-blue.svg)](https://www.rubydoc.info/gems/railsful)
