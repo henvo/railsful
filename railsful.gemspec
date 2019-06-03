@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'JSON API serializer and deserializer for Rails'
   spec.description   = 'This gem provides useful helper functions to ' \
-                       'interaact with JSON API.'
+                       'interact with JSON API.'
   spec.homepage      = 'https://github.com/hausgold/railsful'
   spec.license       = 'MIT'
 
